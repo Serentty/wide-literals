@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Serentty"]
 license = "CC0-1.0 OR Unlicense"
 description = "UTF-16 string literals for use with wide string APIs accepting pointers to null-terminated strings"
-
+repository = "https://github.com/Serentty/wide-literals"
 edition = "2018"
 
 [lib]
