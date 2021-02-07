@@ -11,13 +11,17 @@ pub fn w(input: TokenStream) -> TokenStream {
     };
     let string = string_literal.value();
     let mut output = String::from("&[");
-    for (i, code_unit) in string.encode_utf16().chain(std::iter::once(0)).enumerate() {
+    for (i, code_unit) in string.encode_utf16().enumerate() {
+        if code_unit == 0 {
+            panic!("A null-terminated wide string cannot contain a null character.")
+        }
         output.push_str(&format!("0x{:X}", code_unit));
         if i == 0 {
             output.push_str("u16");
         }
         output.push(',');
     }
-    output.push_str("] as *const u16");
+    output.push_str("0x0][0] as &'static u16");
     output.parse().unwrap()
 }
+

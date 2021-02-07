@@ -1,6 +1,6 @@
 [package]
 name = "wide-literals"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Serentty"]
 license = "CC0-1.0 OR Unlicense"
 description = "UTF-16 string literals for use with wide string APIs accepting pointers to null-terminated strings"
