@@ -1,0 +1,16 @@
+[package]
+name = "wide-literals"
+version = "0.1.0"
+authors = ["Serentty"]
+license = "CC0-1.0 OR Unlicense"
+description = "UTF-16 string literals for use with wide string APIs accepting pointers to null-terminated strings"
+
+edition = "2018"
+
+[lib]
+crate-type = ["proc-macro"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = "1"
